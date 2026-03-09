@@ -1,0 +1,2 @@
+timestamp,client_id,mode,target,num_rounds,local_epochs,test_acc,test_loss,peak_rss_mb,avg_cpu_norm_percent
+2026-03-01 22:45:50,client_1,plain_pftlstyle,localhost:50051,15,1,0.883000,0.371334,1091.03,11.73
