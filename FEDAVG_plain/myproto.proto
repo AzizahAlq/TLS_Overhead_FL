@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package fedavg;
+
+service Aggregator {
+  rpc SendModelUpdate (ModelUpdate) returns (Ack);
+  rpc GetGlobalModel (EmptyRequest) returns (ModelResponse);
+}
+
+message ModelUpdate {
+  bytes weights = 1;
+  int32 round = 2;
+  int32 num_samples = 3;
+}
+
+message ModelResponse {
+  bytes weights = 1;
+  int32 round = 2;
+}
+
+message Ack {
+  string status = 1;
+  int32 current_round = 2;
+}
+
+message EmptyRequest {}
